@@ -1,0 +1,60 @@
+---
+import gitHubIcon from "../assets/svg/github.svg";
+import liveIcon from "../assets/svg/live.svg"
+
+export interface Props{
+    id: string;
+    title: string;
+    imageSrc: string;
+    description: string;
+    githubLink: string;
+    liveLink: string;
+}
+
+const {id,title,imageSrc,description,githubLink,liveLink} = Astro.props;
+
+---
+
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3 max-w-4xl m-8">
+
+				<div>
+					<img src={imageSrc} alt={title} class="rounded-2xl"/>
+					</a>
+				</div>
+				<div>
+					<span class="text-2xl text-cyan-50 font-bold">
+						{title}
+					</span>
+					<p class="text-cyan-50 mt-3">
+						{description}
+					</p>
+					<div class="flex space-x-3 mt-3">
+						<a href={githubLink} target="_blank" rel="noopener noreferrer">
+							<button class="bg-gray-700 
+							hover:bg-gray-800 
+							text-white font-bold py-2 px-4 rounded-full">
+								<div class="flex items-center gap-1">
+									<img src={gitHubIcon.src} alt="Logo de GitHub"/>
+									<span>
+										Repositorio
+									</span>
+								</div>
+							</button>
+						</a>
+
+						<!-- <a href={liveLink} target="_blank" rel="noopener noreferrer">
+							<button class="bg-gray-700 
+							hover:bg-gray-800 
+							text-white font-bold py-2 px-4 rounded-full">
+								<div class="flex items-center gap-1">
+									<img src={liveIcon.src} alt="Logo de GitHub"/>
+									<span>
+										Live
+									</span>
+								</div>
+							</button>
+						</a> -->
+					</div>
+				</div>
+
+			</div>
