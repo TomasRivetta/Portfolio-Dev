@@ -21,9 +21,12 @@ import bootstrapIcon from "../assets/svg/brand-bootstrap.svg";
 import astroIcon from "../assets/svg/brand-astro.svg";
 import figmaIcon from "../assets/svg/brand-figma.svg";
 import mailIcon from "../assets/svg/mail.svg"
+import reduxIcon from "../assets/svg/brand-redux.svg"
 
 import proyecto1 from "../assets/imgs/proyectoFunkoShop.png"
 import ProjectCard from "../components/projectCard.astro";
+import TechnologyCard from "../components/TechnologyCard.astro";
+
 
 ---
 <Layout title="Portfolio Tomas Rivetta">
@@ -47,7 +50,7 @@ import ProjectCard from "../components/projectCard.astro";
 							Soy un <span class="font-bold">Full Stack Developer</span> 
 							Me enfoco en crear aplicaciones robustas y escalables, utilizando React, Node.js, y bases de datos SQL y NoSQL. He trabajado en proyectos que incluyen desarrollo web, implementación de APIs y aplicaciones de escritorio. Mi formación en la UTN me ha brindado una base sólida en programación orientada a objetos y diseño de software, permitiéndome resolver problemas complejos de manera eficiente.
 						</p>
-						<div class="flex space-x-3 mt-3">
+						<div class="flex space-x-1 mt-3 flex-wrap">
 
 							<a href="https://www.linkedin.com/in/tomasrivetta-fullstack/" target="_blank">
 								<button class="bg-gray-700 
@@ -174,74 +177,22 @@ import ProjectCard from "../components/projectCard.astro";
 
 				<h2 class="text-3xl font-bold text-cyan-50">Tecnologias</h2>
 
-				<div class="grid grid-cols-2 md:grid-cols-5 gap-5 mt-3">
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-5 mt-3">
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={htmlIcon} alt="Icono de HTML"></Image>
-						<p class="text-sm text-zinc-50">HTML</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={cssIcon} alt="Icono de CSS"></Image>
-						<p class="text-sm text-zinc-50">CSS</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={javascriptIcon} alt="Icono de JavaScript"></Image>
-						<p class="text-sm text-zinc-50">JavaScript</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={bootstrapIcon} alt="Icono de Bootstrap"></Image>
-						<p class="text-sm text-zinc-50">Bootstrap</p>
-					</div>
-
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={msSqlServerIcon} alt="Icono de Microsoft Sql Server"></Image>
-						<p class="text-sm text-zinc-50">MS Sql Server</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={reactIcon} alt="Icono de React JS"></Image>
-						<p class="text-sm text-zinc-50">React JS</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={nodeIcon} alt="Icono de Node JS"></Image>
-						<p class="text-sm text-zinc-50">Node JS</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={typescriptIcon} alt="Icono de TypeScript"></Image>
-						<p class="text-sm text-zinc-50">TypeScript</p>
-
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={gitIcon} alt="Icono de Git"></Image>
-						<p class="text-sm text-zinc-50">Git</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={tailwindIcon} alt="Icono de Tailwind"></Image>
-						<p class="text-sm text-zinc-50">Tailwind</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={mongoIcon} alt="Icono de Mongo DB"></Image>
-						<p class="text-sm text-zinc-50">Mongo DB</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={astroIcon} alt="Icono de Astro"></Image>
-						<p class="text-sm text-zinc-50">Astro</p>
-					</div>
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={figmaIcon} alt="Icono de Figma"></Image>
-						<p class="text-sm text-zinc-50">Figma</p>
-					</div>
+					<TechnologyCard id="HTML" title="HTML" imageSrc={htmlIcon.src}/>
+					<TechnologyCard id="CSS" title="CSS" imageSrc={cssIcon.src}/>
+					<TechnologyCard id="JavaScript" title="JavaScript" imageSrc={javascriptIcon.src}/>
+					<TechnologyCard id="Bootstrap" title="Bootstrap" imageSrc={bootstrapIcon.src}/>
+					<TechnologyCard id="Tailwind" title="Tailwind" imageSrc={tailwindIcon.src}/>
+					<TechnologyCard id="MS Sql Server" title="MS Sql Server" imageSrc={msSqlServerIcon.src}/>
+					<TechnologyCard id="React JS" title="React JS" imageSrc={reactIcon.src}/>
+					<TechnologyCard id="Redux" title="Redux" imageSrc={reduxIcon.src}/>
+					<TechnologyCard id="Node JS" title="Node JS" imageSrc={nodeIcon.src}/>
+					<TechnologyCard id="TypeScript" title="TypeScript" imageSrc={typescriptIcon.src}/>
+					<TechnologyCard id="Git" title="Git" imageSrc={gitIcon.src}/>
+					<TechnologyCard id="Mongo DB" title="Mongo DB" imageSrc={mongoIcon.src}/>
+					<TechnologyCard id="Astro" title="Astro" imageSrc={astroIcon.src}/>
+					<TechnologyCard id="Figma" title="Figma" imageSrc={figmaIcon.src}/>
 				
 				</div>
 
