@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProjectList from "../components/ProjectList.astro";
+import proyecto1 from "../assets/imgs/proyectoFunkoShop.png";
+
+// Define tus proyectos aquí
+const projects = [
+    {
+        id: "1",
+        title: "Funkoshop",
+        imageSrc: proyecto1.src,
+        description: "El proyecto FunkoshopCaC-Backend es un backend desarrollado en Node.js para una aplicación de comercio electrónico especializada en la venta de figuras Funko Pop. Implementa funcionalidades clave como gestión de productos y manejo de pedidos. Utiliza Express para la creación de APIs RESTful, MySQL y Sequelize(ORM) como base de datos para almacenar la información. El proyecto sigue principios de arquitectura limpia y está diseñado para ser escalable y eficiente, facilitando su mantenimiento y expansión.",
+        githubLink: "https://github.com/MarkoTeixido/FunkoshopCaC-Backend",
+        liveLink: "https://funkoshopcac.vercel.app/",
+        stack: ["Node.js", "Express", "MySQL", "Sequelize", "JavaScript"]
+    },
+    // Agrega más proyectos aquí siguiendo el mismo formato
+    // {
+    //     id: "2",
+    //     title: "Proyecto 2",
+    //     imageSrc: proyecto2.src,
+    //     description: "Descripción detallada del proyecto 2...",
+    //     githubLink: "https://github.com/...",
+    //     liveLink: "https://...",
+    //     stack: ["React", "TypeScript", "Tailwind CSS"]
+    // },
+];
+---
+
+<Layout title="Proyectos - Tomas Rivetta">
+    <section class="mx-4 sm:mx-6 md:mx-8 lg:mx-10 my-8">
+        <!-- Header -->
+        <div class="mb-8">
+            <a 
+                href="/" 
+                class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-6 group"
+            >
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    class="w-5 h-5 transition-transform group-hover:-translate-x-1" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span class="font-semibold">Volver al inicio</span>
+            </a>
+
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-cyan-50 mb-3">
+                Mis Proyectos
+            </h1>
+            <p class="text-base sm:text-lg text-zinc-400 max-w-3xl">
+                Explora los proyectos en los que he trabajado, desde aplicaciones web hasta soluciones backend robustas.
+            </p>
+        </div>
+
+        <!-- Lista de proyectos -->
+        <ProjectList projects={projects} />
+
+        <!-- Botón para volver arriba (si hay muchos proyectos) -->
+        {projects.length > 2 && (
+            <div class="mt-12 text-center">
+                <a 
+                    href="/" 
+                    class="inline-block"
+                >
+                    <button class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 px-6 rounded-full transition-all text-sm sm:text-base">
+                        <div class="flex items-center gap-2">
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                class="w-5 h-5" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                            <span>Volver al inicio</span>
+                        </div>
+                    </button>
+                </a>
+            </div>
+        )}
+    </section>
+</Layout>

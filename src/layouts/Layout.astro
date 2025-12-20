@@ -11,13 +11,13 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/src/assets/imgs/codificacion.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body class="bg-neutral-950">
-		<main class="max-w-screen-xl mr-auto ml-auto">
+		<main class="max-w-screen-xl mx-auto">
 			<slot />
 		</main>
 	</body>

@@ -13,7 +13,6 @@ import javascriptIcon from "../assets/svg/javascript.svg"
 import gitIcon from "../assets/svg/git.svg"
 import mongoIcon from "../assets/svg/brand-mongodb.svg"
 import msSqlServerIcon from "../assets/svg/brand-database.svg"
-import reactIcon from "../assets/svg/brand-react.svg"
 import nodeIcon from "../assets/svg/brand-nodejs.svg"
 import htmlIcon from "../assets/svg/brand-html5.svg";
 import cssIcon from "../assets/svg/brand-css3.svg";
@@ -21,87 +20,71 @@ import bootstrapIcon from "../assets/svg/brand-bootstrap.svg";
 import astroIcon from "../assets/svg/brand-astro.svg";
 import figmaIcon from "../assets/svg/brand-figma.svg";
 import mailIcon from "../assets/svg/mail.svg"
+import javaIcon from "../assets/svg/java.svg"
+import angularIcon from "../assets/svg/angular.svg"
 
-import proyecto1 from "../assets/imgs/proyectoFunkoShop.png"
-import ProjectCard from "../components/projectCard.astro";
+
 
 ---
 <Layout title="Portfolio Tomas Rivetta">
-	<section class="mx-10 mt-5">
+	<section class="mx-4 sm:mx-6 md:mx-8 lg:mx-10 mt-3 mb-3">
 		<!-- GRID PRINCIPAL -->
-		<div class="grid grid-cols-1 md:grid-cols-4 gap-5">
-			<div class="md:col-span-2 bg-custom p-5 rounded-2xl">
+		<div class="grid grid-cols-1 lg:grid-cols-6 gap-3 lg:gap-4">
+			<div class="lg:col-span-3 bg-custom p-3 sm:p-4 rounded-2xl">
 	
-				<div class="flex items-center space-x-5 flex-wrap">
+				<div class="flex flex-col md:flex-row items-center md:items-start gap-4">
 	
-					<div class="w-40 h-40 gb-gray-600 rounded-full overflow-hidden ml-4 mb-5">
+					<div class="w-24 h-24 sm:w-32 sm:h-32 gb-gray-600 rounded-full overflow-hidden flex-shrink-0">
 	
 						<Image src={fotoPerfil} alt="Foto de perfil de Tomas Rivetta" class="w-full h-full object-cover"/>						
 					</div>
-					<div>
-						<h1 class="text-3xl font-bold text-cyan-50">Tomas Rivetta</h1>
-						<p class="text-zinc-50">
+					<div class="text-center md:text-left">
+						<h1 class="text-xl sm:text-2xl font-bold text-cyan-50">Tomas Rivetta</h1>
+						<p class="text-xs sm:text-sm text-zinc-50">
 							Full Stack Developer | Apasionado por la Programación
 						</p>
-						<p class="text-cyan-50 mt-3">
-							Soy un <span class="font-bold">Full Stack Developer</span> 
-							Me enfoco en crear aplicaciones robustas y escalables, utilizando React, Node.js, y bases de datos SQL y NoSQL. He trabajado en proyectos que incluyen desarrollo web, implementación de APIs y aplicaciones de escritorio. Mi formación en la UTN me ha brindado una base sólida en programación orientada a objetos y diseño de software, permitiéndome resolver problemas complejos de manera eficiente.
+						<p class="text-xs sm:text-sm text-cyan-50 mt-2">
+							Soy un <span class="font-bold">Full Stack Developer</span>
+Me especializo en el desarrollo de aplicaciones web robustas y escalables, utilizando Angular para el frontend y Java con Spring Boot en el backend.
 						</p>
-						<div class="flex space-x-3 mt-3">
+						<div class="flex flex-wrap justify-center md:justify-start gap-2 mt-3 sm:mt-4">
 
 							<a href="https://www.linkedin.com/in/tomasrivetta-fullstack/" target="_blank">
-								<button class="bg-gray-700 
-								hover:bg-gray-800 
-								text-white font-bold py-2 px-4 rounded-full">				
+								<button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1.5 px-3 rounded-full text-xs sm:text-sm">				
 									<div class="flex items-center gap-1">
-										<Image src={linkedlinIcon} alt="Logo de Linkedin">
+										<Image src={linkedlinIcon} alt="Logo de Linkedin" class="w-4 h-4">
 										</Image>
-										<span>
-											Linkedlin
-										</span>
+										<span class="hidden sm:inline">Linkedlin</span>
 									</div>		
 								</button>
 							</a>
 
 							<a href="https://github.com/TomasRivetta" target="_blank">
-								<button class="bg-gray-700 
-								hover:bg-gray-800 
-								text-white font-bold py-2 px-4 rounded-full">
+								<button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1.5 px-3 rounded-full text-xs sm:text-sm">
 									<div class="flex items-center gap-1">
-										<Image src={gitHubIcon} alt="Logo de GitHub">
+										<Image src={gitHubIcon} alt="Logo de GitHub" class="w-4 h-4">
 										</Image>
-										<span>
-											GitHub
-										</span>
+										<span class="hidden sm:inline">GitHub</span>
 									</div>
 								</button>
 							</a>
 
-
 							<a href="../../public/TomasRivetta-Curriculum.pdf" target="_blank" rel="noopener noreferrer">
-								<button class="bg-gray-700 
-								hover:bg-gray-800 
-								text-white font-bold py-2 px-4 rounded-full">
+								<button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1.5 px-3 rounded-full text-xs sm:text-sm">
 									<div class="flex items-center gap-1">
-										<Image src={fileIcon} alt="Logo de GitHub">
+										<Image src={fileIcon} alt="Logo de GitHub" class="w-4 h-4">
 										</Image>
-										<span>
-											CV
-										</span>
+										<span class="hidden sm:inline">CV</span>
 									</div>
 								</button>
 							</a>
 
 							<a href="mailto:totorivetta@gmail.com" target="_blank">
-								<button class="bg-gray-700 
-								hover:bg-gray-800 
-								text-white font-bold py-2 px-4 rounded-full">
+								<button class="bg-gray-700 hover:bg-gray-800 text-white font-bold py-1.5 px-3 rounded-full text-xs sm:text-sm">
 									<div class="flex items-center gap-1">
-										<Image src={mailIcon} alt="Logo de mail">
+										<Image src={mailIcon} alt="Logo de mail" class="w-4 h-4">
 										</Image>
-										<span>
-											Contactame
-										</span>
+										<span class="hidden sm:inline">Contactame</span>
 									</div>
 								</button>
 							</a>
@@ -113,28 +96,21 @@ import ProjectCard from "../components/projectCard.astro";
 				</div>
 			</div>
 
-			<div class="md:row-span-1 md:col-span-2 bg-custom p-5 rounded-2xl">
+			<div class="lg:col-span-3 bg-custom p-3 sm:p-4 rounded-2xl">
 
-				<h2 class="text-3xl font-bold text-cyan-50">Educacion</h2>
-				<div class="mt-3">
-	
-					<h3 class="text-lg font-semibold text-zinc-50">UTN Universidad Tecnológica Nacional</h3>
-	
-					<p class="text-sm text-zinc-400">
-						Ene. 2023 - Jun. 2026
+				<h2 class="text-xl sm:text-2xl font-bold text-cyan-50 mb-3">Educación</h2>
+				<div>
+					<h3 class="text-base sm:text-lg font-semibold text-zinc-50">UTN Universidad Tecnológica Nacional</h3>
+					<p class="text-xs sm:text-sm text-zinc-400">Ene. 2023 - Feb. 2026</p>
+					<p class="text-xs sm:text-sm text-zinc-400">Técnico universitario en Programación</p>
+					<p class="text-xs sm:text-sm text-cyan-50 mt-1">
+						- Lógica de Programación<br>
+						- Estructuras de datos<br>
+						- Programación orientada a objetos
 					</p>
-					<p class="text-sm text-zinc-400">
-						Tecnico universitario en Programacion
-					</p>
-					<p class="text-cyan-50">
-						- Lógica de Programación.<br>
-						- Estructuras de datos. <br>
-						- Programación orientada a objetos.
-					</p>
-	
 				</div>
 
-				<div class="mt-3">
+				<!-- <div class="mt-3">
 	
 					<h3 class="text-lg font-semibold text-zinc-50">Programa Codo A Codo</h3>
 	
@@ -150,9 +126,9 @@ import ProjectCard from "../components/projectCard.astro";
 						- Accesibilidad web.
 					</p>
 	
-				</div>
+				</div> -->
 
-				<div class="mt-3">
+				<!-- <div class="mt-3">
 	
 					<h3 class="text-lg font-semibold text-zinc-50">Alura ONE(Oracle Next Education)</h3>
 	
@@ -167,125 +143,145 @@ import ProjectCard from "../components/projectCard.astro";
 						- Accesibilidad web.
 					</p>
 	
+				</div> -->
+			</div>
+
+			<!-- Habilidades -->
+			<div class="lg:col-span-2 bg-custom p-3 sm:p-4 rounded-2xl">
+				<h2 class="text-xl sm:text-2xl font-bold text-cyan-50 text-center mb-3">Habilidades</h2>
+				
+				<div class="space-y-3">
+					<div>
+						<h3 class="text-sm font-semibold text-cyan-400 mb-2">Técnicas</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">APIs RESTful</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Git & GitHub</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Metodologías Ágiles</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Diseño Responsive</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Testing</span>
+						</div>
+					</div>
+					
+					<div>
+						<h3 class="text-sm font-semibold text-cyan-400 mb-2">Blandas</h3>
+						<div class="flex flex-wrap gap-2">
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Trabajo en equipo</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Comunicación efectiva</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Resolución de problemas</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Aprendizaje continuo</span>
+							<span class="bg-gray-700 text-cyan-50 text-xs px-2 py-1 rounded-full">Adaptabilidad</span>
+						</div>
+					</div>
 				</div>
 			</div>
 
-			<div class="md:col-span-2 bg-custom p-5 rounded-2xl">
+			<!-- Tecnologias -->
+			<div class="lg:col-span-4 bg-custom p-3 sm:p-4 rounded-2xl">
 
-				<h2 class="text-3xl font-bold text-cyan-50">Tecnologias</h2>
+				<h2 class="text-xl sm:text-2xl font-bold text-cyan-50 text-center mb-3">Tecnologías</h2>
 
-				<div class="grid grid-cols-2 md:grid-cols-5 gap-5 mt-3">
+				<div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-7 gap-3 sm:gap-4">
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={htmlIcon} alt="Icono de HTML"></Image>
-						<p class="text-sm text-zinc-50">HTML</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={htmlIcon} alt="Icono de HTML" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">HTML</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={cssIcon} alt="Icono de CSS"></Image>
-						<p class="text-sm text-zinc-50">CSS</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={cssIcon} alt="Icono de CSS" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">CSS</p>
+					</div>
+					
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={bootstrapIcon} alt="Icono de Bootstrap" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Bootstrap</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={javascriptIcon} alt="Icono de JavaScript"></Image>
-						<p class="text-sm text-zinc-50">JavaScript</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={tailwindIcon} alt="Icono de Tailwind" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Tailwind</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={bootstrapIcon} alt="Icono de Bootstrap"></Image>
-						<p class="text-sm text-zinc-50">Bootstrap</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={javascriptIcon} alt="Icono de JavaScript" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">JavaScript</p>
 					</div>
 
-
-					<div class="flex justify-center flex-col items-center">
-						<Image src={msSqlServerIcon} alt="Icono de Microsoft Sql Server"></Image>
-						<p class="text-sm text-zinc-50">MS Sql Server</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={typescriptIcon} alt="Icono de TypeScript" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">TypeScript</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={reactIcon} alt="Icono de React JS"></Image>
-						<p class="text-sm text-zinc-50">React JS</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={msSqlServerIcon} alt="Icono de Microsoft Sql Server" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">MS SQL</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={nodeIcon} alt="Icono de Node JS"></Image>
-						<p class="text-sm text-zinc-50">Node JS</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={mongoIcon} alt="Icono de Mongo DB" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">MongoDB</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={typescriptIcon} alt="Icono de TypeScript"></Image>
-						<p class="text-sm text-zinc-50">TypeScript</p>
-
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={nodeIcon} alt="Icono de Node JS" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Node JS</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={gitIcon} alt="Icono de Git"></Image>
-						<p class="text-sm text-zinc-50">Git</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={angularIcon} alt="Icono de Angular" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Angular</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={tailwindIcon} alt="Icono de Tailwind"></Image>
-						<p class="text-sm text-zinc-50">Tailwind</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={astroIcon} alt="Icono de Astro" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Astro</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={mongoIcon} alt="Icono de Mongo DB"></Image>
-						<p class="text-sm text-zinc-50">Mongo DB</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={javaIcon} alt="Icono de Java" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Java</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={astroIcon} alt="Icono de Astro"></Image>
-						<p class="text-sm text-zinc-50">Astro</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={gitIcon} alt="Icono de Git" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Git</p>
 					</div>
 
-					<div class="flex justify-center flex-col items-center">
-						<Image src={figmaIcon} alt="Icono de Figma"></Image>
-						<p class="text-sm text-zinc-50">Figma</p>
+					<div class="flex justify-center flex-col items-center gap-1">
+						<Image src={figmaIcon} alt="Icono de Figma" class="w-10 h-10 sm:w-12 sm:h-12"></Image>
+						<p class="text-xs text-zinc-50 text-center">Figma</p>
 					</div>
 				
 				</div>
 
 			</div>
 
-			<div class="md:row-span-1 md:col-span-2 bg-custom p-5 rounded-2xl">
-
-				<h2 class="text-3xl font-bold text-cyan-50">Experiencia</h2>
-				<div class="mt-3">
+			<!-- Proyectos -->
+			<div class="lg:col-span-2 bg-custom p-3 sm:p-4 rounded-2xl flex flex-col items-center justify-center">
+				<h2 class="text-xl sm:text-2xl font-bold text-cyan-50 mb-2 text-center">Proyectos</h2>
+				<p class="text-xs sm:text-sm text-zinc-400 text-center mb-4">
+					Descubre mis proyectos y aplicaciones.
+				</p>
+				
+				<a href="/proyectos">
+					<button class="bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded-full transition-all text-xs sm:text-sm group">
+						<div class="flex items-center gap-2">
+							<span>Ver proyectos</span>
+							<svg 
+								xmlns="http://www.w3.org/2000/svg" 
+								class="w-4 h-4 transition-transform group-hover:translate-x-1" 
+								fill="none" 
+								viewBox="0 0 24 24" 
+								stroke="currentColor"
+							>
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+							</svg>
+						</div>
+					</button>
+				</a>
 	
-					<h3 class="text-lg font-semibold text-zinc-50">Desarrollador Full Stack. Freelancer</h3>
-	
-					<p class="text-sm text-zinc-400">
-						ene. 2024 - Actualidad
-					</p>
-					<p class="text-cyan-50">
-						Diseño y desarrollo de aplicaciones web a medida, trabajando tanto en el frontend como en el backend. Implementación de interfaces de usuario interactivas y accesibles con React. Desarrollo de APIs RESTful utilizando Node.js y Express.
-					</p>
-	
-				</div>
 			</div>
 
-			
-
-
-		</div>
-
-
-
-	</section>
-
-	<section class="mx-10 mt-5 mb-5">
-
-		<div class="bg-custom p-5 rounded-xl">
-			<h2 class="text-3xl font-bold text-cyan-50">Proyectos</h2>
-
-			<ProjectCard 
-			id="1" 
-			title="Funkoshop" 
-			imageSrc={proyecto1.src}
-			description="El proyecto FunkoshopCaC-Backend es un backend desarrollado en Node.js para una aplicación de comercio electrónico especializada en la venta de figuras Funko Pop. Implementa funcionalidades clave como gestión de productos y manejo de pedidos. Utiliza Express para la creación de APIs RESTful, MySQL y Sequelize(ORM) como base de datos para almacenar la información. El proyecto sigue principios de arquitectura limpia y está diseñado para ser escalable y eficiente, facilitando su mantenimiento y expansión."
-			githubLink="https://github.com/MarkoTeixido/FunkoshopCaC-Backend"
-			liveLink="https://funkoshopcac.vercel.app/"
-			/>
 
 		</div>
 
